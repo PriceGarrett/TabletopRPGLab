@@ -1,10 +1,11 @@
 html{
-    background-color: rgb(197, 197, 197);
+    background-color: #941B0C;
 }
+
 body{
     max-width: 1080px;
     margin: 0px auto;
-    background-color: white;
+    background-color: #F2E3BC;
     font-family: 'Roboto', sans-serif;
     padding: 10px;
 }
@@ -35,6 +36,11 @@ h3{
 
 }
 
+h4{
+    margin-top: 20px;
+    text-align: center;
+}
+
 p{
     padding-left:10px;
 }
@@ -43,21 +49,83 @@ ul{
     padding-left: 20px;
     list-style-type: circle;
 }
+
 .container-width{    
     padding-bottom:10px;
 }
 
 .row{
     margin: 0px;
+    margin-bottom: 5px;
 }
 
 .col{
     width: auto;
 }
+
 .col-5{
     margin: 0px;
     padding: 0px;
     min-width: 55%;
+}
+.col-4{
+    margin: 0px;
+    padding: 0px;
+    min-width: 65%;
+}
+
+.col-3{
+    min-width: 25%;
+}
+
+.link-box{
+    height: 100%;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    border: 2px solid #941B0C;
+    justify-content: center;
+    align-content: center;
+}
+
+.photo-box{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.sign-up, .log-in{
+    color: #FFFFFF;
+
+    display: flex;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    width: fit-content;
+    text-align: center;
+}
+
+.link-dark, .link-dark:hover{
+    color: black;
+}
+a{
+    color: #FFFFFF;
+}
+
+a:hover{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sign-up{
+    
+    background-color: #1C5D99;
+}
+
+.log-in{
+    background-color: #941B0C;
 }
 
 .credit{
