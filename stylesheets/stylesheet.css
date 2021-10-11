@@ -130,6 +130,11 @@ a:hover{
     border: black;
 }
 
+.proceed:hover{
+    cursor: pointer;
+    background-color: #ad2310;
+}
+
 .credit{
     font-size:xx-small;
 }
