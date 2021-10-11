@@ -96,7 +96,7 @@ ul{
     align-content: center;
 }
 
-.sign-up, .log-in{
+.sign-up, .proceed{
     color: #FFFFFF;
 
     display: flex;
@@ -125,8 +125,9 @@ a:hover{
     background-color: #1C5D99;
 }
 
-.log-in{
+.proceed{
     background-color: #941B0C;
+    border: black;
 }
 
 .credit{
