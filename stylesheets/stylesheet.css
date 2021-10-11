@@ -110,6 +110,7 @@ ul{
 .link-dark, .link-dark:hover{
     color: black;
 }
+
 a{
     color: #FFFFFF;
 }
@@ -130,4 +131,8 @@ a:hover{
 
 .credit{
     font-size:xx-small;
+}
+
+.searchbar{
+    width: fit-content;
 }

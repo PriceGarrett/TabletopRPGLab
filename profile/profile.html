@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/stylesheets/stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta lang="en">
         <meta charset="UTF-8">
         <title>Tabletop RPG Lab</title>
@@ -11,9 +12,10 @@
     </head>
     <body>
         <h1>Tabletop RPG Lab</h1>
+        
 
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #941B0C;">
-            <a class="navbar-brand"><img src= "/images/icons/sword.png" width="30px"></a>
+            <a class="navbar-brand" navbar-collapse><img src= "/images/icons/sword.png" width="30px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -53,6 +55,7 @@
                   <div class= "col">
                     <div class="link-box">
                         <h3>Create New Character</h3>
+                        
                         <hr/>
                         <div class="container">
                             <div class= "row">
@@ -60,15 +63,45 @@
                                     Name:
                                 </div>
                                 <div class="col">
-                                    Class:
+                                    <form class= "searchbar">
+                                      <label for= "classes">Class:</label>
+                                      <select name= "classes" id= "classSearch">
+                                        <option value= "barbarian">Barbarian</option>
+                                        <option value= "bard">Bard</option>
+                                        <option value= "cleric">Cleric</option>
+                                        <option value= "druid">Druid</option>
+                                        <option value= "fighter">Fighter</option>
+                                        <option value= "monk">Monk</option>
+                                        <option value= "paladin">Paladin</option>
+                                        <option value= "ranger">Ranger</option>
+                                        <option value= "rogue">Rogue</option>
+                                        <option value= "sorcerer">Sorcerer</option>
+                                        <option value= "warlock">Warlock</option>
+                                        <option value= "wizard">Wizard</option>
+                                      </select>
+                                    </form>
                                 </div>
                                 <div class="col">
-                                    Race:
+                                  <form class= "searchbar">
+                                    <label for= "races">Race:</label>
+                                    <select name= "races" id= "raceSearch">
+                                      <option value= "dragonborn">Dragonborn</option>
+                                      <option value= "dwarf">Dwarf</option>
+                                      <option value= "elf">Elf</option>
+                                      <option value= "gnome">Gnome</option>
+                                      <option value= "half-elf">Half-Elf</option>
+                                      <option value= "halfling">Halfling</option>
+                                      <option value= "half-orc">Half-Orc</option>
+                                      <option value= "human">Human</option>
+                                      <option value= "tiefling">Tiefling</option>
+                                    </select>
+                                  </form>
                                 </div>
                                 <div class="col">
                                     Level:
                                 </div>
                             </div>
+                            <input class= "log-in" id= "submit" type= "submit" value="Go">
                             <hr/>
                             <h5>Stats:</h5>
                             <div class="row">
@@ -90,5 +123,11 @@
 
           <footer>Github repo: <a class= "link-dark" href= "https://github.com/PriceGarrett/TabletopRPGLab">TabletopRPGLab</a></footer>
           <div class="credit">Icons made by <a class= "link-dark" href="" title="Nikita Golubev">Nikita Golubev</a> from <a class= "link-dark" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+          <script text="type/javascript" src="/script.js"></script>
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
     </body>
 </html>
