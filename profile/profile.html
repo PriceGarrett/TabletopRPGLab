@@ -40,27 +40,18 @@
 
           <div class= "container-width">
               <div class="row">
-                  <div class= "col-3">
-                    <div class="link-box">
-                        <h4>Your Profile</h4>
-                        <hr/>
-                        <ul>
-                            <li><a class= 'link-dark' href= "#">Saved Characters</a></li>
-                            <li><a class= 'link-dark' href= "#">Saved Campaigns</a></li>
-                            <li><a class= 'link-dark' href= "#">Create</a></li>
-                    
-                        </ul>
-                    </div>
-                  </div>
                   <div class= "col">
-                    <div class="link-box">
+                    <div class="link-box" id= "characterInfo">
                         <h3>Create New Character</h3>
                         
                         <hr/>
                         <div class="container">
                             <div class= "row">
                                 <div class="col">
-                                    Name:
+                                    <form>
+                                      <label for= "nameInput">Name:</label>
+                                      <input type= "text" id= "nameInput" placeholder= "Name">
+                                    </form>
                                 </div>
                                 <div class="col">
                                     <form class= "searchbar">
@@ -98,24 +89,113 @@
                                   </form>
                                 </div>
                                 <div class="col">
-                                    Level:
+                                    <form>
+                                      <label class= "displayLevel">Level:</label>
+                                      <input type= "number" min= "1" max= "20" class= "number-display" id= "levelSelect" value="1">
+                                      
+                                    </form>
                                 </div>
                             </div>
                             <input class= "proceed" id= "submit" type= "submit" value="Go">
-                            <hr/>
-                            <h5>Stats:</h5>
-                            <div class="row">
-                                <div class= 'col-3'>
-                                    Strength:<br>Constitution:<br>Wisdom:<br>Intelligence:<br>Charisma:<br>Luck: 
-                                </div>
-                                <div class="col">Inventory:</div>
+                        
+                        <div class= "row">
+                          <div class = "col" id= "stat-box">
+                            <div>
+                              <h5>Proficiency Bonus</h5>
+                              <input disabled class="number-display" type="number" id= "profBonus" value="0">
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="proceed"><a href= "#">Add Attribute</a></div>
-                                </div>
+                            <form id= "stats">
+                              <label class= "stat-display">Strength</label>
+                              <input type= "number" min= "1" max= "20" class= "number-display" id= "strengthValue" value="10">
+                              <label class= "stat-display">Dexterity</label>
+                              <input type= "number" min= "1" max= "20" class= "number-display" id= "dexterityValue" value="10">
+                              <label class= "stat-display">Constitution</label>
+                              <input type= "number" min= "1" max= "20" class= "number-display" id= "constitutionValue" value="10">
+                              <label class= "stat-display">Intelligence</label>
+                              <input type= "number" min= "1" max= "20" class= "number-display" id= "intelligenceValue" value="10">
+                              <label class= "stat-display">Wisdom</label>
+                              <input type= "number" min= "1" max= "20" class= "number-display" id= "wisdomValue" value="10">
+                              <label class= "stat-display">Charisma</label>
+                              <input type= "number" min= "1" max= "20" class= "number-display" id= "charismaValue" value="10">
+                            </form>
+                            <div>
+                              <h5>Saving Throws</h5>
+                              <input id= "str" class= "save-throw" type= "checkbox" disabled><label>Strength</label>
+                              <br>
+                              <input id= "dex" class= "save-throw" type= "checkbox" disabled><label>Dexterity</label>
+                              <br>
+                              <input id= "con" class= "save-throw" type= "checkbox" disabled><label>Constitution</label>
+                              <br>
+                              <input id= "int" class= "save-throw" type= "checkbox" disabled><label>Intelligence</label>
+                              <br>
+                              <input id= "wis" class= "save-throw" type= "checkbox" disabled><label>Wisdom</label>
+                              <br>
+                              <input id= "cha" class= "save-throw" type= "checkbox" disabled><label>Charisma</label>
+                              <br>
                             </div>
+                          </div>
+                          <div class="col">
+                            <div>
+                              <h5>Skills</h5>
+                              <p id = "chooseMax"></p>
+                              <h6>Strength</h6>
+                              <input id= "skill-athletics" class= "skill" type= "checkbox" disabled><label>Athletics</label>
+                              <br>
+                              <h6>Dexterity</h6>
+                              <input id= "skill-acrobatics" class= "skill" type= "checkbox" disabled><label>Acrobatics</label>
+                              <br>
+                              <input id= "skill-sleight-of-hand" class= "skill" type= "checkbox" disabled><label>Sleight of Hand</label>
+                              <br>
+                              <input id= "skill-stealth" class= "skill" type= "checkbox" disabled><label>Stealth</label>
+                              <br>
+                              <h6>Intelligence</h6>
+                              <input id= "skill-arcana" class= "skill" type= "checkbox" disabled><label>Arcana</label>
+                              <br>
+                              <input id= "skill-history" class= "skill" type= "checkbox" disabled><label>History</label>
+                              <br>
+                              <input id= "skill-investigation" class= "skill" type= "checkbox" disabled><label>Investigation</label>
+                              <br>
+                              <input id= "skill-nature" class= "skill" type= "checkbox" disabled><label>Nature</label>
+                              <br>
+                              <input id= "skill-religion" class= "skill" type= "checkbox" disabled><label>Religion</label>
+                              <br>
+                              <h6>Wisdom</h6>
+                              <input id= "skill-animal-handling" class= "skill" type= "checkbox" disabled><label>Animal Handling</label>
+                              <br>
+                              <input id= "skill-insight" class= "skill" type= "checkbox" disabled><label>Insight</label>
+                              <br>
+                              <input id= "skill-medicine" class= "skill" type= "checkbox" disabled><label>Medicine</label>
+                              <br>
+                              <input id= "skill-perception" class= "skill" type= "checkbox" disabled><label>Perception</label>
+                              <br>
+                              <input id= "skill-survival" class= "skill" type= "checkbox" disabled><label>Survival</label>
+                              <br>
+                              <h6>Charisma</h6>
+                              <input id= "skill-deception" class= "skill" type= "checkbox" disabled><label>Deception</label>
+                              <br>
+                              <input id= "skill-intimidation" class= "skill" type= "checkbox" disabled><label>Intimidation</label>
+                              <br>
+                              <input id= "skill-performance" class= "skill" type= "checkbox" disabled><label>Performance</label>
+                              <br>
+                              <input id= "skill-persuasion" class= "skill" type= "checkbox" disabled><label>Persuasion</label>
+                              <br>
+                            </div>
+                          </div>
+                          <div class= "col">
+                            <label class= "stats-etc" for= "speed">Speed</label>
+                            <input type= "number" min= "1" max= "60" class= "number-display" id= "speed" value="0" disabled>
+                            <label class= "stats-etc" for= "maxHP">Hit Points</label>
+                            <input type= "number" min= "1" max= "999" class= "number-display" id= "maxHP" value="0" disabled>
+                            <label class= "stats-etc" for= "maxHP">Hit Dice</label>
+                            <input type= "number" min= "1" max= "12" class= "number-display" id= "hitDieValue" value="0" disabled>
+                            <h5>Inventory</h5>
+                            <div id= "inventory">
+
+                            </div>
+                          </div>
                         </div>
+                        </div>
+                        <input class= "proceed" id= "finalize" type= "submit" value="Go">
                     </div>
                   </div>
               </div>
@@ -124,7 +204,9 @@
           <footer>Github repo: <a class= "link-dark" href= "https://github.com/PriceGarrett/TabletopRPGLab">TabletopRPGLab</a></footer>
           <div class="credit">Icons made by <a class= "link-dark" href="" title="Nikita Golubev">Nikita Golubev</a> from <a class= "link-dark" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-          <script text="type/javascript" src="/script.js"></script>
+          <script text="typle/javascript" src= "/scripts/item.js"></script>
+          <script text="typle/javascript" src= "/scripts/character.js"></script>
+          <script text="type/javascript" src="/profile/scripts/script-char-creator.js"></script>
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

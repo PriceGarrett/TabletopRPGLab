@@ -142,3 +142,7 @@ a:hover{
 .searchbar{
     width: fit-content;
 }
+
+.number-display {
+    display: block;
+}
